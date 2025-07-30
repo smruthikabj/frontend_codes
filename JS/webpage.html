@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+<body>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            border: 2px solid red;
+        }
+    </style>
+    <h1 id = "main-heading">Welcome</h1>
+    <p id = "main-paragraph">This is a paragraph.</p>
+    <ul id = "myList">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+    <div class = "card" id = "myCard">This is a card.</div>
+    <br>
+    <img src = "https://cdn.britannica.com/77/81277-050-2A6A35B2/Adelie-penguin.jpg" alt = "Penguin" class = "image">
+    <br>
+    <button id = "main-button">Click me</button>
+
+    <script>
+        const heading = document.getElementById('main-heading');
+        heading.textContent = "Welcome to DOM learning";
+        heading.innerHTML = "Welcome to <span style = 'color: red;'>DOM</span> learning";
+
+        const paragraph = document.getElementById('main-paragraph');
+        paragraph.textContent = "This is changed message.";
+
+        const button = document.getElementById('main-button');
+        button.style.color = "black";
+        button.style.backgroundColor = "lightgreen";
+        button.style.fontSize = "25px";
+
+        const list = document.getElementById('myList');
+
+        const newItem = document.createElement('li');
+        newItem.textContent = "Yellow";
+        list.appendChild(newItem);
+
+        const firstItem = document.querySelector('li');
+        list.removeChild(firstItem);
+
+        const card = document.querySelector('.card');
+        //card.classList.add('highlight');
+        //card.classList.remove('highlight');
+        card.classList.toggle('highlight');
+        console.log(card.classList.contains('highlight'));
+
+        const image = document.querySelector('img');
+        image.setAttribute('width', '500px');
+        image.setAttribute('height', '200px');
+
+        console.log(image.getAttribute('src'));
+
+        image.removeAttribute('width');
+    </script>
+</body>
+</html>

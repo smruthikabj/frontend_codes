@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations</title>
+    <style>
+        .box {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        .box:hover {
+            transform: translate(20px,10px) scale(1.2) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

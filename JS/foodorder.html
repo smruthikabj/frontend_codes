@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function placeOrder() {
+            return new Promise (function(resolve) {
+                setTimeout (function() {
+                    console.log("Order is placed");
+                }, 2000);
+            });
+        }
+
+        function makePayment() {
+            return new Promise (function(resolve) {
+                setTimeout (function() {
+                    console.log("Payment is done");
+                }, 2000);
+            });
+        }
+
+        function confirmOrder() {
+             return new Promise (function(resolve) { 
+                setTimeout (function() {
+                    console.log("Order is confirmed");
+                }, 2000);
+            });
+        }
+
+        function deliverOrder() {
+             return new Promise (function(resolve) {
+                setTimeout(function() {
+                    console.log("Order is delivered");
+                }, 2000);
+             });
+        }
+
+        placeOrder()
+            .then(makePayment())
+
+            .then(confirmOrder())
+            
+            .then(deliverOrder());
+
+    </script>
+</body>
+</html>

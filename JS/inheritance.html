@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle {
+            start() {
+                console.log("Starting the vehicle");
+            }
+
+            stop() {
+                console.log("Stopping the vehicle");
+            }
+        }
+
+        class Bike extends Vehicle {
+            start() {
+                console.log("Bike is starting");
+            }
+            bikeMove() {
+                console.log("Bike is moving");
+            }
+
+        }
+
+        class Car extends Vehicle {
+            start() {
+                console.log("Car is starting");
+            }
+            carMove() {
+                console.log("Car is moving");
+            }
+        }
+
+        const bike = new Bike();
+        bike.start();
+        bike.bikeMove();
+        bike.stop();
+
+        const car = new Car();
+        car.start();
+        car.carMove();
+        car.stop();
+    </script>
+</body>
+</html>

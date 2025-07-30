@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchUser() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("User is fetched");
+                }, 1000);
+            });
+        }
+
+        function fetchPost() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("User posts fetched");
+                }, 2000);
+            });
+        }
+
+        async function fetchData(){
+            console.log("Start fetching...");
+
+            const user = await fetchUser();
+            console.log(user);
+
+            const posts = await fetchPost();
+            console.log(posts);
+
+            console.log("Fetching completed");
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>

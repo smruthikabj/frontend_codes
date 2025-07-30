@@ -1,0 +1,20 @@
+body {
+  background-color: lightgrey;
+}
+.red {
+  background-color: yellow;
+  color: red;
+}
+#pid {
+  background-color: aqua;
+  color: blue;
+}
+p {
+  background-color: lightgreen;
+    color: green;
+}
+h1,
+h2,
+h3 {
+  color: maroon;
+}

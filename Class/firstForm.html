@@ -1,0 +1,95 @@
+<form>
+    <label for = "name">Name:</label><br>
+    <input type = "text" id = "name" name = "name" placeholder = "Enter your name">
+    <br> <br>
+
+    <label for = "email">Email:</label><br>
+    <input type = "email" id = "email" name = "email" placeholder = "Enter your email">
+    <br><br>
+
+    <label for = "password">Password:</label><br>
+    <input type = "password" id = "password" name = "password" placeholder = "Enter your password" required title = "Password must be atleast 8 characters long">
+    <br><br>
+
+    <label for = "age">Age:</label><br>
+    <input type = "number" id = "age" name = "age" placeholder = "Enter your age" required title = "Please enter your age in years" min = "18" max = "30">
+    <br><br>
+
+    <label for = "address">Address:</label><br>
+    <textarea name = "address" id = "address" value = "address" placeholder = "Enter your address"></textarea>
+    <br><br>
+
+    <label for = "gender">Gender:</label>
+    Male<input type = "radio"  id = "gender" name = "gender" value = "male">
+    Female<input type = "radio" id = "gender" name = "gender" value = "female">
+    <br><br>
+
+    <label for = "date">Date:</label>
+    <input type = "date" id = "date" name = "date" required>
+    <br><br>
+
+    <label for = "time">Time:</label>
+    <input type = "time" id = "time" name = "time" required>
+    <br><br>
+
+    <label for = "website">Website:</label>
+    <input type = "url" id = "website" name = "website" required>
+    <br><br>
+
+    <h3>Select your choices</h3>
+    <label>
+        <input type = "checkbox" name = "option1" value = "Option 1">Option 1
+    </label> <br>
+
+    <label>
+        <input type = "checkbox" name = "option2" value = "Option 2">Option 2
+    </label> <br>
+
+    <label>
+        <input type = "checkbox" name = "option3" value = "Option 3">Option 3
+    </label> <br>
+
+    <label>
+        <input type = "checkbox" name = "option4" value = "Option 4">Option 4
+    </label> <br> <br>
+
+    <label>Would you like to subscribe?</label>
+    <input type = "radio" name = "subscribe" value = "Yes">Yes
+    <input type = "radio" name = "subscribe" value = "No">No
+    <br><br>
+
+    <label>Voulme:</label>
+    <input type = "range" name = "volume" min = "0" max = "100" value = "50">
+    <br><br>
+
+    <label>File Upload:</label>
+    <input type = "file" name = "file" accept = ".jpg, .png, .jpeg">
+    <br><br>
+
+    <label for = "fruits">Fruits:</label>
+    <select name = "fruits" id = "fruits">
+        <option value = "apple">Apple</option>
+        <option value = "banana">Banana</option>
+        <option value = "orange">Orange</option>
+    </select>
+    <br><br>
+
+    <label for = "comments">Your Comments:</label>
+    <textarea id = "comments" name = "comments" rows = "4" cols = "50" placeholder = "Enter your comments"></textarea>
+    <br><br>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label for = "name">Name:</label>
+        <input type = "text" placeholder = "Enter your name">
+        <label for = "email">Email:</label>
+        <input type = "email" placeholder = "Enter your email">
+        <label for = "password">Password:</label>
+        <input type = "password" placeholder = "Enter your password">
+    </fieldset>
+    <br><br>
+
+    <button type = "reset">Reset</button>
+
+    <button type = "submit">Submit</button>
+</form>

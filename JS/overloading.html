@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet() {
+            console.log("Hello, World!");
+        }
+
+        function greet(name) {
+            console.log("Hello, " + name);
+        }
+
+        greet(); //Hello, undefined
+        greet("Alice"); //Hello, Alice
+
+
+        function add(a,b) {
+            console.log(a+b);
+        }
+
+        function add(a, b, c) {
+            console.log(a+b+c);
+        }
+
+        function add(a, b, c, d) {
+            console.log(a+b+c+d);
+        }
+
+        add(1,2);
+        add(1,2,3);
+        add(1,2,3,4); //10
+
+        //Using the "arguments" object
+
+        function add() {
+            if (arguments.length === 0) {
+                return "No arguments passed";
+            } else if (arguments.length === 1) {
+                return "Cannot perform addition";
+            } else {
+                let sum = 0;
+                for (let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }
+                return sum;
+            }
+        }
+
+        console.log(add()); //No arguments passed
+        console.log(add(1)); //Cannot perform addition
+        console.log(add(1,2)); //3
+        console.log(add(1,2,3)); //6
+
+        //Using the spread operator (...)
+        function add(...args) {
+            if(args.length === 0) {
+                return "No arguments passed";
+            } else if (args.length === 1) {
+                return "Cannot perform addition";
+            } else {
+                let sum = 0;
+                for (let i = 0; i < args.length; i++) {
+                    sum += args[i];
+                }
+                return sum;
+            }
+        }
+
+        console.log(add()); //No arguments passed
+        console.log(add(1)); //Cannot perform addition
+        console.log(add(1,2)); //3
+        console.log(add(1,2,3)); //6
+
+        function add(...args){
+            if (args.length === 0) {
+                return "No arguments passed";
+            } else if (args.length === 1) {
+                return "Cannot perform addition";
+            }else {
+                let sum = 0;
+                for (let i = 0; i < args.length; i++) {
+                    sum += args[i];
+                }
+                return sum;
+            }
+        }
+
+        console.log(add(10, 20)); //30
+        console.log(add(10, 20, 30)); //60
+        console.log(add(10, 20, 30, 40)); //100
+        console.log(add(10, 20, 30, 40, 50)); //150
+    </script>
+</body>
+</html>

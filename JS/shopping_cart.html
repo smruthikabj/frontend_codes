@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <script>
+
+        class Shoppingcart  {
+            constructor() {
+                this.items = [];
+            }
+
+            addItem(item) {
+                this.items.push(item);
+                console.log(item +  " added to the cart!");
+            }
+
+            viewCart() {
+                console.log("Your cart contains: " + this.items.join(", "));
+            }
+        }
+
+        const myCart =  new Shoppingcart();
+        
+        myCart.addItem("Phone"); // Phone added to the cart!
+        myCart.addItem("Tablet"); // Tablet added to the cart!
+        myCart.addItem("Laptop"); // Laptop added to the cart!
+        myCart.viewCart(); // Your cart contains: Phone, Tablet, Laptop
+    </script>
+</body>
+</html>

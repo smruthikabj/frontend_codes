@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Creating objects
+        let employee = {
+            empId: 1,
+            name: "John",
+            salary: 10000,
+
+            work : function() {
+                console.log("Employee is working");
+            },
+
+            doProject : function() {
+                console.log("Employee is working on a project");
+            }
+        };
+
+        console.log(employee.empId);
+        console.log(employee.name);
+        console.log(employee.salary);
+        employee.work();
+        employee.doProject();
+
+        //Output:
+        //1
+        //John
+        //10000
+        //Employee is working
+        //Employee is working on a project
+
+        //Class and Object
+
+        class Employee1 {
+            //empId;
+            //name;
+            //salary;
+
+            constructor(empId, name, salary){
+                this.empId = empId;
+                this.name = name;
+                this.salary = salary;
+            }
+            work() {
+                console.log(this.name + " is working");
+            }
+
+            doProject() {
+                console.log(this.name + " is working on a project");
+            }
+        }
+
+        const emp1 = new Employee1();
+        emp1.empId = 22;
+        emp1.name = "Smith";
+        emp1.salary = 50000;
+        console.log(emp1.empId);
+        console.log(emp1.name);
+        console.log(emp1.salary);
+        emp1.work();
+        emp1.doProject();
+
+        let emp2 = new Employee1(33, "Alice", 75000);
+        console.log(emp2.empId);
+        console.log(emp2.name);
+        console.log(emp2.salary);
+        emp2.work();
+        emp2.doProject();
+
+        //Output:
+        //22
+        //Smith
+        //50000
+        //Employee is working
+        //Employee is working on a project
+        //33
+        //Alice
+        //75000
+        //Alice is working
+        //Alice is working on a project
+    </script>
+</body>
+</html>

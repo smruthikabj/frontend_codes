@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p class = "info">This is paragraph 1.</p>
+    <p class = "info">This is paragraph 2.</p>
+    <p id = "p3">This is paragraph 3.</p>
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+    <input type = "radio" name = "gender" value = "male">Male
+    <input type = "radio" name = "gender" value = "female">Female
+    <br>
+    <button>Click me</button>
+
+    <div id = "container">
+        <p>This is message 1.</p>
+        <p>This is message 2.</p>
+        <p>This is message 3.</p>
+    </div>
+
+    <script>
+        const heading = document.querySelector('h1');
+        console.log(heading);
+
+        const paragraphs = document.querySelectorAll('p');
+        console.log(paragraphs);
+        paragraphs.forEach((p) => console.log(p.textContent));
+
+        const para = document.getElementById('p3');
+        console.log(para);
+
+        const button = document.querySelector('button');
+        console.log(button);
+
+        heading.textContent = "Hello World!";
+        button.style.backgroundColor = "red";
+
+        const classes = document.getElementsByClassName('info');
+        console.log(classes);
+        console.log(classes[0]);
+
+        for(let i = 0; i <= classes.length - 1; i++) {
+            console.log(classes[i].textContent);
+        }
+
+        const genderInputs = document.getElementsByName('gender');
+        console.log(genderInputs);
+
+        const listItems = document.getElementsByTagName('li');
+        console.log(listItems);
+        console.log(listItems.length);
+
+        const container = document.querySelectorAll('#container p');
+        console.log(container);
+
+    </script>
+</body>
+</html>

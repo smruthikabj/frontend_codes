@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //High-Order Function: A function which takes another function as a parameter or returns another function is called High-Order Function.
+        //In the below example, outer is a High-Order Function i.e, it returns inner() function
+        function outer() {
+            console.log("Inside outer");
+
+            //inner is a closure
+            return function inner() {
+                console.log("Inside inner");
+            };
+
+        }
+
+        const inr = outer(); //inr is a reference to inner()
+        inr(); //Calling inner()
+    </script>
+</body>
+</html>

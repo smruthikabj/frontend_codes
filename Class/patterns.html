@@ -1,0 +1,78 @@
+<form>
+
+    <!-- Phone Number Validation -->
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone" 
+            pattern="^\d{3}-\d{3}\-\d{4}$"
+            title="Format: 123-456-7890"
+            required> 
+    <br><br>
+
+    <!-- First Name Validation -->
+
+    <label for="firstname">First Name:</label><br>
+    <input type="text" id="firstname" name="firstname" 
+            pattern="^[A-Za-z]{0-49}$"
+            title="First name must contain only letters and must be 1-50 characters long"
+            required> 
+    <br><br>
+
+    <!-- Password Validation -->
+
+    <!-- Case 1: Basic Password Validation (Minimum 8 characters) -->
+
+    <label for="password1">Password 1:</label><br>
+    <input type="password" id="password1" name="password1" 
+            pattern=".{8,}"
+            title="Password must be atleast 8 characters long"
+            required> 
+    <br><br>
+
+    <!-- Case 2: Pattern Without Lookahead (Simplifed Validation) -->
+
+    <label for="password2">Password 2:</label><br>
+    <input type="password" id="password2" name="password2" 
+            pattern="[A-Za-z\d@$!%*?&#]{8,}$"
+            title="Password must contain any character from the set A-Za-z\d@$!%*?&# and must be 8 characters long"
+            required> 
+    <br><br>
+
+    <!-- Case 3: Password with Uppercase, Lowercase and Digit (Minimum 8 characters) -->
+
+    <label for="password3">Password 3:</label><br>
+    <input type="password" id="password3" name="password3" 
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+            title="Password must contain atleast one uppercase letter, one lowercase letter, one digit and must be 8 characters long"
+            required> 
+    <br><br>
+
+    <!-- Case 4: Strong Password Validation (Minimum 12 characters, must include at least one uppercase letter, one lowercase letter, one digit and one special character) -->
+
+    <label for="password4">Password 4:</label><br>
+    <input type="password" id="password4" name="password4" 
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$"
+            title="Password must contain atleast one uppercase letter, one lowercase letter, one digit, one special character from the set @$!%*?&# and must be 12 characters long"
+            required> 
+    <br><br>
+
+    <!-- Case 5: Customizable Pattern for Password Validation (Minimum 10 characters, must include at least two digits, two uppercase letters and one special character from the set !#%*) -->
+
+    <label for="password5">Password 5:</label><br>
+    <input type="password" id="password5" name="password5" 
+            pattern="^(?=(.*\d){2,})(?=(.*[A-Z]){2,})(?=.*[!#%*])[A-Z\d!#%*]{10,}$"
+            title="Password must contain atleast two digits, two uppercase letters and one special character from the set !#%* and must be 10 characters long"
+            required> 
+    <br><br>
+
+    <!-- Email Validation -->
+
+    <label for="email_id">Email:</label><br>
+    <input type="email" id="email_id" name="email_id" 
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="Format: username@domain.com"
+            required> 
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>

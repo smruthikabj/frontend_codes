@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let restaurantPromise = new Promise(function(resolve, reject) {
+            let status = true;
+            if(status) {
+                resolve("The food is delivered!");
+            } else {
+                reject("Sorry! The food cannot delivered.");
+            }
+        });
+
+        restaurantPromise
+            .then(function(message1) {
+                console.log(message1);
+                return "Please give the feedback!";
+            })
+            .then(function(message2) {
+                console.log(message2);
+                return "Thanks for the feedback!";
+            })
+            .then(function(message3) {
+                console.log(message3);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    </script>
+</body>
+</html>

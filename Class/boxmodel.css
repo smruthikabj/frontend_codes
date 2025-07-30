@@ -1,0 +1,45 @@
+.main-div {
+    border: 5px solid blue;
+    height: 500px;
+    width: 800px;
+    margin: 20px;
+}
+
+.child-div1 {
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.child-div2 {
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    margin-top: -164px;
+    margin-left: 200px;
+    text-align: center;
+    padding: 20px;
+}
+
+.child-div3 {
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    margin-top: -142px;
+    margin-left: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.child-div4 {
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    margin-top: -144px;
+    margin-left: 600px;
+    text-align: center;
+    padding: 20px;
+}

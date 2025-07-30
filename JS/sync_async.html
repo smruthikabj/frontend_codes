@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Synchronous Functions
+
+        console.log("Task 1");
+        console.log("Task 2");
+        console.log("Task 3");
+
+        //Asynchronous Functions
+
+        console.log("Task 1");
+
+        setTimeout(function() {
+            console.log("Task 2 (Delayed)");
+        }, 2000);
+
+        console.log("Task 3");
+
+        //Synchronous Example: Blocking Code
+        
+        function longRunningTask() {
+            for (let i = 0; i < 1e9; i++) {}
+            console.log("Long task finished!");
+        }
+
+        console.log("Start");
+        longRunningTask();
+        console.log("End");
+
+        //Asynchronous Example: Non-Blocking Code
+
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Long task finished! (Delayed)");
+        }, 3000);
+
+        console.log("End");
+    </script>
+</body>
+</html>

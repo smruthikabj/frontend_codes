@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outerFunction() {
+            let count = 0;
+
+            return function innerFunction() {
+                count++;
+                console.log(`Count is: ${count}`);
+            };
+        }
+
+        const counter = outerFunction();
+        counter(); //Output: Count is: 1
+        counter(); //Output: Count is: 2
+        counter(); //Output: Count is: 3
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is heading</h1>
+
+    <p>This is paragraph</p>
+
+    <div id = "#container">
+        <p>This is message 1.</p>
+        <p>This is message 2.</p>
+        <p>This is message 3.</p>
+    </div>
+
+    <form id = "myForm">
+        <label for = "name">Name:</label>
+        <input type = "text" id = "name" name = "name" placeholder = "Enter your name">
+        <br> <br>
+
+        <label for = "email">Email:</label>
+        <input type = "email" id = "email" name = "email" placeholder = "Enter your email">
+        <br><br>
+
+        <button type = "submit">Submit</button>
+    </form>
+    <br>
+    <button id = "btn">Click me</button>
+
+    <script>
+        const button = document.querySelector('#btn');
+
+        const container = document.getElementById('#container');
+
+        button.addEventListener('click', () => {
+            console.log("Button is clicked");
+        });
+
+        button.addEventListener('dblclick', () => {
+            alert("Button is double clicked");
+        });
+
+        container.addEventListener('mouseover', () => {
+            console.log("Mouse is over container");
+        });
+
+        button.addEventListener('mouseout', () => {
+            console.log("Mouse is out of button");
+        });
+
+        button.addEventListener('mousemove', () => {
+            console.log(`Mouse position: (${event.clientX}, ${event.clientY})`);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            console.log(`Key pressed: ${event.key}`);
+        });
+
+        document.addEventListener('keyup', (event) => {
+            console.log(`Key released: ${event.key}`);
+        });
+
+        document.querySelector('#myForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log("Form is submitted");
+        });
+
+        document.querySelector('#name').addEventListener('change', (event) => {
+            console.log(`Name changed to: ${event.target.value}`);
+        });
+        
+        document.querySelector('#name').addEventListener('focus',() => {
+            console.log("Name is focused");
+        });
+
+        document.querySelector('#email').addEventListener('focus',() => {
+            console.log("Email is focused");
+        });
+
+        document.querySelector('#email').addEventListener('blur',() => {
+            console.log("Email is blurred");
+        });
+
+        document.querySelector('#name').addEventListener('input',(event) => {
+            console.log(`Current value: ${event.target.value}`);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM is fully loaded and parsed.");
+        });
+
+        window.addEventListener('resize', () => {
+            console.log("Window is resized.");
+        });
+
+        window.addEventListener('scroll', () => {
+            console.log("Window is scrolled.");
+        });
+    </script>
+
+</body>
+</html>

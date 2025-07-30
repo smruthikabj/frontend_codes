@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Conditional Constructs
+
+        //if statement
+
+        let number = 5;
+        if(number == 5) {
+            console.log("The number is 5");
+        }
+        console.log("End of program");
+
+        //Output:
+        //The number is 5
+        //End of program
+
+        //else statement
+        let num = 11;
+        if(num % 2 == 0) {
+            console.log("Even Number");
+        }
+        else {
+            console.log("Odd Number");
+        }
+
+        //Output:
+        //Odd Number
+
+        //else if statement
+        let day = 5;
+        if(day == 1) {
+            console.log("Monday");
+        } else if(day == 2) {
+            console.log("Tuesday");
+        } else if(day == 3) {
+            console.log("Wednesday");
+        } else if(day == 4) {
+            console.log("Thursday");
+        } else if(day == 5) {
+            console.log("Friday");
+        } else if(day == 6) {
+            console.log("Saturday");
+        } else if(day == 7){
+            console.log("Sunday");
+        } else {
+            console.log("Invalid day");
+        }
+
+        //Output:
+        //Friday
+
+        //switch statement
+
+        let month = 11;
+        switch(month) {
+            case 1:
+                console.log("January");
+                break;
+            case 2:
+                console.log("February");
+                break;
+            case 3:
+                console.log("March");
+                break;
+            case 4:
+                console.log("April");
+                break;
+            case 5:
+                console.log("May");
+                break;
+            case 6:
+                console.log("June");
+                break;
+            case 7:
+                console.log("July");
+                break;
+            case 8:
+                console.log("August");
+                break;
+            case 9:
+                console.log("September");
+                break;
+            case 10:
+                console.log("October");
+                break;
+            case 11:
+                console.log("November");
+                break;
+            case 12:
+                console.log("December");
+                break;
+            default:
+                console.log("Invalid month");
+        }
+
+        //Output:
+        //November
+
+        //Looping Constructs
+
+        //for loop
+        for(let i = 1; i <= 5; i++) {
+            let square = i * i;
+            console.log("Square of " + i + " is: " + square);
+        }
+
+        //Output:
+        //Square of 1 is: 1
+        //Square of 2 is: 4
+        //Square of 3 is: 9
+        //Square of 4 is: 16
+        //Square of 5 is: 25
+
+        //while loop
+        let i = 1;
+        while(i <= 5) {
+            let result = i * i;
+            console.log("Square of " + i + " is: " + result);
+            i++;
+        }
+
+        //Output:
+        //Square of 1 is: 1
+        //Square of 2 is: 4
+        //Square of 3 is: 9
+        //Square of 4 is: 16
+        //Square of 5 is: 25
+
+        //do-while loop
+        let j = 1;
+        do {
+            let res = j * j;
+            console.log("Square of " + j + " is: " + res);
+            j++;
+        } while(j <= 5);
+
+        //Output:
+        //Square of 1 is: 1
+        //Square of 2 is: 4
+        //Square of 3 is: 9
+        //Square of 4 is: 16
+        //Square of 5 is: 25
+
+
+        //for...of loop
+        let fruits = ["apple", "banana", "cherry"];
+
+        for(let fruit of fruits) {
+            console.log(fruit);
+        }
+
+        //Output:
+        //apple
+        //banana
+        //cherry
+
+        //for...in loop
+        let student = {
+            name: "John",
+            age: 22,
+            marks: 76
+        };
+
+        for (let details in student) {
+            console.log(details + ": " + student[details]);
+        }
+
+        //Output:
+        //name: John
+        //age: 22
+        //marks: 76
+
+        //forEach loop
+        let colors = ["red", "green", "blue"];
+
+        colors.forEach(function(color,index) {
+            console.log(`Color at index ${index} is ${color}`);
+        });
+
+        //Output:
+        //Color at index 0 is red
+        //Color at index 1 is green
+        //Color at index 2 is blue
+
+        //Using Arrown function with forEach loop
+
+        colors.forEach(color => console.log(color));
+
+        //Output:
+        //red
+        //green
+        //blue
+        
+        //Control Flow Modifiers
+
+        //Break Statement
+
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) break;
+            console.log(i);
+        }
+
+        //Output:
+        //1
+        //2
+
+        //Continue Statement
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) continue;
+            console.log(i);
+        }
+
+        //Output:
+        //1
+        //2
+        //4
+        //5
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        div {
+            width: 193px;
+            border: 2px solid red;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            border: 2px solid lightgray;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="Friends.PNG" alt="Friends" height="150px" width="200px">
+
+    <h2 style="text-align: center;">Friendship Zone</h2>
+
+    <h3>Add your details to register</h3>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="^[A-Za-z]{3,}$" title="Name should not be less than 3 characters and should not contain any numbers" placeholder="Enter your name" required>
+        <br> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Format: username@domain.com" placeholder="Enter your email" required>
+        <br> <br>
+
+        <label for="age">Age:</label>
+        <input type="numbers" id="age" name="age" min="18" max="" title="Please enter your age in years" placeholder="Enter your age" required>
+        <br> <br>
+
+        <label for="dob">Birth Day:</label>
+        <input type="date" id="dob" name="dob">
+        <br> <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" value="male">M
+        <input type="radio" id="gender" name="gender" value="female">F
+        <br> <br>
+
+        <label for="about">About:</label>
+        <textarea id="about" name="about" cols="30" rows="5">Tell us about yourself...</textarea>
+        <br> <br>
+
+        <lablel for="phone">Phone:</lablel>
+        <input type="text" id="phone" name="phone" pattern="^\+{1}\d{2} \d{3}\d{3}\d{4}$" title="Format:+91 1234567890" placeholder="Enter your phone number" required>
+        <br> <br>
+        <br> <br>
+
+        <label for="interests">Interested in:</label>
+        <input type="checkbox" id="interests" name="interests" value="Friendship">Friendship
+        <input type="checkbox" id="interests" name="interests" value="Dating">Dating
+        <br> <br>
+
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" accept=".jpg, .png, .jpeg">
+        <br> <br>
+
+        <div>
+            <button><a href="registrationconfirmation.html">Register</a></button>
+        <button><a href="registrationconfirmationforadmin.html">Register as Admin</a></button>
+        </div>
+
+    </form>
+
+</body>
+</html>

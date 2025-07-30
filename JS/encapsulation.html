@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            #id; // '#' represents private member and it can't be accessed the variable id outside the class Vehicle
+            name;
+
+            constructor(id, name) {
+                this.#id = id;
+                this.name = name;
+            }
+
+            display() {
+                console.log("Accessing id inside the display method: " + this.#id); //11
+                console.log("Accessing name inside the display method: " + this.name); //Alice
+            }
+        }
+
+        const p = new Person(11, "Alice");
+        //console.log("Accessing id outside the class: " +p.#id); //SyntaxError: Private field '#id' must be declared in an enclosing class
+        console.log("Accessing name outside the class: " +p.name); //Alice
+        p.display();
+
+    </script>
+</body>
+</html>

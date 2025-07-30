@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(...args) {
+           console.log(args.length); //prints the number of arguments passed to the function
+
+        //to print the sum of the values passed to the function
+            let sum = (typeof(args[0])==='string')? '' : 0;
+            for(let i =0; i <= args.length-1; i++) {
+                sum += args[i];
+            }
+            console.log(sum);
+        }
+
+        add();
+        add(1,2);
+        add(1,2,3,4);
+        add("Java", "SQL", "HTML", "CSS", "JS");
+
+        //function declaration (hoisting)
+        
+        //greet("Alice");
+
+        function greet(name) {
+            return `Hello, ${name}`;
+        }
+        console.log(greet("Alice"));
+
+        //function expression (no hoisting)
+
+        let multiply = function(x,y) {
+            return x*y;
+        }
+
+        console.log(multiply(1,2));
+
+        //arrow function
+
+        let sqr = () => {
+            let a= 5;
+            let result = a*a;
+            return result;
+        }
+
+        console.log(sqr());
+
+        let cube = (b) => {
+            let result = b*b*b;
+            return result;
+        }
+
+        console.log(cube(2));
+
+        let squr = (c) => c*c;
+
+        console.log(squr(3));
+
+        let square = d => d * d;
+
+        console.log(square(4));
+
+        let mul = (a,b) => a*b;
+
+        console.log(mul(2,3));
+
+        //exercises
+
+        const calculateArea=function(width,height) {
+            return width*height;
+        }
+
+        console.log(calculateArea(2.5, 3.5));
+
+        const isEevn = (number) => number % 2 == 0;
+
+        console.log(isEevn(4));
+        console.log(isEevn(5));
+
+    </script>
+</body>
+</html>
